@@ -1,0 +1,67 @@
+@import url("https://use.typekit.net/hhz4ygb.css");
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
+main {
+    position: absolute;
+    color: white;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 5cm;
+}
+
+header {
+    grid-column: 2/4;
+    background-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding-left: 5px;
+    font-family: massilia, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+section {
+    font-size: x-large;
+    background-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    padding-left: 5px;
+    font-family: massilia, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.one {
+    grid-column: 6/12;
+    grid-row: 2;
+    
+    
+}
+
+.two {
+    grid-column: 3/6;
+    grid-row: 3;
+
+    
+}
+
+.three {
+    grid-column: 6/12;
+    grid-row: 4;
+
+    
+}
+
+.four {
+    grid-column: 2/8;
+    grid-row: 5;
+
+    
+}
