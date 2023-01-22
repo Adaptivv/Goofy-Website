@@ -1,7 +1,8 @@
 import './style.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
-import spacebg from  './17520.webp'
+
+import spacebg from './17520.webp';
 import gringo from './gringo.jpg';
 import rei from './reitest.jpg';
 
