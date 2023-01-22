@@ -47,10 +47,10 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('17520.webp');
+const spaceTexture = new THREE.TextureLoader().load('./17520.webp');
 scene.background = spaceTexture;
 
-const gringoTexture = new THREE.TextureLoader().load('gringo.jpg');
+const gringoTexture = new THREE.TextureLoader().load('./gringo.jpg');
 
 const gringo = new THREE.Mesh(
   new THREE.BoxGeometry(6,6,6),
@@ -60,7 +60,7 @@ gringo.position.set(20,0,0)
 
 scene.add(gringo);
 
-const thingTexture = new THREE.TextureLoader().load('reitest.jpg');
+const thingTexture = new THREE.TextureLoader().load('./reitest.jpg');
 
 const thing = new THREE.Mesh(
   new THREE.SphereGeometry(3, 30, 30),
