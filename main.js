@@ -1,6 +1,9 @@
 import './style.css'
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import spacebg from  './17520.webp'
+import gringo from './gringo.jpg';
+import rei from './reitest.jpg';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
@@ -47,10 +50,10 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('./17520.webp');
+const spaceTexture = new THREE.TextureLoader().load(spacebg);
 scene.background = spaceTexture;
 
-const gringoTexture = new THREE.TextureLoader().load('./gringo.jpg');
+const gringoTexture = new THREE.TextureLoader().load(gringo);
 
 const gringo = new THREE.Mesh(
   new THREE.BoxGeometry(6,6,6),
@@ -60,7 +63,7 @@ gringo.position.set(20,0,0)
 
 scene.add(gringo);
 
-const thingTexture = new THREE.TextureLoader().load('./reitest.jpg');
+const thingTexture = new THREE.TextureLoader().load(rei);
 
 const thing = new THREE.Mesh(
   new THREE.SphereGeometry(3, 30, 30),
