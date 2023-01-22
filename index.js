@@ -6,6 +6,7 @@ import spacebg from './17520.webp';
 import gringopic from './gringo.jpg';
 import reipic from './reitest.jpg';
 import yaman from './yamanpic.jpg';
+import shrek from './shrek.jpg';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
@@ -35,7 +36,7 @@ scene.add(pointLight, ambientLight);
 
 const lightHelper = new THREE.PointLightHelper(pointLight);
 const gridHelper = new THREE.GridHelper(200, 50);
-//scene.add(lightHelper, gridHelper);
+scene.add(lightHelper, gridHelper);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -79,6 +80,18 @@ thing.position.x = -10;
 
 scene.add(thing);
 
+const octatext = new THREE.TextureLoader().load(shrek);
+
+const goofyocta = new THREE.Mesh(
+  new THREE.OctahedronGeometry(10, 1),
+  new THREE.MeshStandardMaterial({
+    map: octatext,
+  })
+)
+goofyocta.position.x = -10;
+goofyocta.position.y = 0;
+scene.add(goofyocta);
+
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   thing.rotation.x += 0.0005;
@@ -87,6 +100,10 @@ function moveCamera() {
   
   gringo.rotation.x += 0.01;
   gringo.rotation.y += 0.02;
+  
+  goofyocta.rotation.x += 0.0005;
+  goofyocta.rotation.y += 0.0075;
+  goofyocta.rotation.z += 0.0005;
 
   camera.position.x = t*-0.1;
   camera.position.x = t*-0.01;
